@@ -1,10 +1,14 @@
-export const presets = [
-    { name: "Toad", 
-      matrix: [[0,0], [1, -1], [1, 0],[0, 1], [0, 2], [1,1]], 
-      start: 0
-    },
-    { name: "Glider", matrix: [], start: []},
-    { name: "Quad Blinker", matrix: [], start: []},
-    { name: "Pulsar", matrix: [], start: []},
 
-]
+import React from 'react';
+
+ const PresetConfigurations = ({name, matrix, startingPoint, createPresetGrid}) => {
+  return (
+    <div onClick={() => createPresetGrid(matrix, startingPoint)}>
+      {name}
+    </div>
+  )
+ } 
+
+export default PresetConfigurations;
+
+//TODO: if time, add Pulsar, 5 cell line, or blinker later

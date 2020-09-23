@@ -1,6 +1,40 @@
 import React from 'react';
 
-const GameControls = ({ setRunning, running, runningRef, runSimulation, setGrid, generateEmptyGrid }) => {
+const GameControls = props => {
+    const {
+        generateEmptyGrid,
+        runSimulation,
+        clearGrid,
+        setGrid,
+        running,
+        setRunning,
+        runningRef,
+        numRows,
+        setNumRows,
+        generation,
+        setGeneration,
+        speed,
+        setSpeed,
+    } = props;
+
+    const increaseSize = () => {
+        if (numRows < 40) setNumRows(numRows + 5)
+        setGeneration(0)
+    }
+
+    const decreaseSize = () => {
+        if (numRows > 20) setNumRows(numRows - 5)
+        setGeneration(0)
+    }
+
+    const slower = () => {
+        if (speed < 2000) setSpeed(speed +250)
+    }
+
+    const faster = () => {
+        if (speed > 250) setSpeed(speed - 250)
+    }
+
     return (
         <div className="game-controls">
             <button 
@@ -8,21 +42,41 @@ const GameControls = ({ setRunning, running, runningRef, runSimulation, setGrid,
                     setRunning(!running);
                     if (!running) {
                     runningRef.current = true;
-                    runSimulation();
+                    runSimulation()
                     }
                 }}
             >
                 {running ? 'Stop' : 'Start' }
             </button>
+            
+            <button onClick={() => clearGrid()}>Clear Grid</button>
+            
+            <button onClick={slower}>Slower</button>
+            <button onClick={faster}>Faster</button>
+            <button disabled={running} onClick={decreaseSize}>Decrease Grid Size</button>
+            <button disabled={running} onClick={increaseSize}>Increase Grid Size</button>
+            
             <button
                 onClick={() => {
-                    setGrid(generateEmptyGrid());
-                }}
+                const rows = [];
+                    for (let i = 0; i < numRows; i++) {
+                        const row =[]
+                        for (let k = 0; k < numRows; k++) {
+                            row.push(Math.random() > 0.7 ? 1 : 0)
+                        } //70% chance of getting a 0
+                        rows.push(row)
+                    }
+                setGrid(rows);
+            }}
             > 
-                Clear Grid
+                Randomize!
             </button>
         </div>
     )
 }
 
 export default GameControls;
+
+//TODO:
+// -  it seems like the game is not playing on the increased grid size, it adds random cells but they do not play.
+// - the generations keep running even after all cells have stopped moving. need to fix this.

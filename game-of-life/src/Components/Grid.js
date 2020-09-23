@@ -2,7 +2,7 @@ import React from 'react';
 import produce from 'immer';
 
 
-const Grid = ({ grid, setGrid }) => {
+const Grid = ({ grid, setGrid, running }) => {
 
     const activateColor = (rowIndex, colIndex) => {    
       setGrid(g => {
@@ -12,6 +12,11 @@ const Grid = ({ grid, setGrid }) => {
         : gridCopy[rowIndex][colIndex] = 1;
         })
       })
+      // setGrid(() => {
+      //   const gridCopy = grid.map(row => [...row]);
+      //   gridCopy[rowIndex][colIndex] = gridCopy[rowIndex][colIndex] ? 0 : 1;
+      //   return gridCopy;
+      // })
     }
   
     return (
@@ -23,7 +28,7 @@ const Grid = ({ grid, setGrid }) => {
                   <div 
                     key={'col' + i2}
                     className={col ? "cell alive" : "cell"} 
-                    onClick={() => activateColor(i1, i2)} 
+                    onClick={running ? null : () => activateColor(i1, i2)} 
                   />)
             })}
           </div>

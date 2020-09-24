@@ -3,7 +3,7 @@ import React from 'react';
 
  const PresetConfigurations = ({name, matrix, startingPoint, createPresetGrid}) => {
   return (
-    <div onClick={() => createPresetGrid(matrix, startingPoint)}>
+    <div className="each-preset" onClick={() => createPresetGrid(matrix, startingPoint)}>
       {name}
     </div>
   )
@@ -11,4 +11,3 @@ import React from 'react';
 
 export default PresetConfigurations;
 
-//TODO: if time, add Pulsar, 5 cell line, or blinker later

@@ -1,39 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 
 * {
   max-width: 100%;
 }
 
+body{
+  /* background-color: #fffffa; */
+  background-color: #f5f5f5;
+  margin: 0 auto;
+}
+
+.App {
+  max-width: auto;
+  display: flex;
+  flex-direction: column;
+  
+  margin: 0 auto;
+  /* padding: 10px 10px; */
+}
+
 h1 {
   text-align: center;
+  padding: 2%;
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 main {
-  max-width: 1600px;
+  font-family: "Source Sans Pro",sans-serif;
+  display: flex;
+  margin: 0 auto;
+}
+
+.left-grid-and-controls {
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
-  margin: 0 auto;
-  padding: 10px 10px;
+  align-items: center;
+  width: 48%;
+  padding: 2%;
+}
+
+.grid-card {
+  background-color: #e28cf5;
+  border-radius: 15px;
+  padding: 2%;
+  /* margin-top: 7%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.settings {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: -45px;
+  color: black;
+  text-align: center;
 }
 
 .grid {
   display: flex;
   flex-direction: column;
-  margin: 1rem;
+  margin: 3rem;
+  width: auto;
 }
 
 .row {
@@ -41,13 +78,101 @@ main {
 }
 
 .cell {
-  width: 20px;
-  height: 20px;
-  background-color: white;
-  border: 1px solid black;
+  width: 1rem;
+  height: 1rem;
+  background-color: #fffffa;
+  border: 1px solid #011627;
   margin: 1px;
 }
 
 .alive {
-  background-color: fuchsia;
+  background: linear-gradient(to bottom, #f4c2ff, black );
+}
+
+.first-set-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  padding: .4rem .4rem;
+  margin: .2rem;
+  font-size: 1.5rem;
+  background-image: linear-gradient(45deg, #f5908c, #fff86e,  #e28cf5 );
+  background-size: 300%;
+  background-position: left;
+  transition: background-position 1s;
+  /* background-color: #e28cf5; */
+  color: black;
+  width: auto;
+  border-radius: 7px;
+}
+
+button:hover {
+  /* background-color: linear-gradient(#f5908c); */
+  background-position: right;
+}
+
+.right-rules-and-presets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 48%;
+  padding: 2%;
+}
+
+.right-rules-and-presets h2 {
+  text-align: center;
+} 
+
+.rules-section {
+  width: 85%;
+  text-align: left;
+}
+
+.rules-section p {
+  width: 90%;
+  margin: 5%;
+}
+
+.presets-section {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.presets-section p {
+  width: 90%;
+  margin: 1% 5%;
+}
+.each-preset{
+  cursor: pointer;
+  border: 0;
+  border-radius: 7px;
+  padding: .4rem .4rem;
+  margin: .5rem;
+  font-size: 1.5rem;
+  background-image: linear-gradient(45deg, #f5908c, #fff86e );
+  height: 40px;
+  width: 260px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.presets-list {
+  background-color:#e28cf5;
+  border-radius: 7px;
+  margin: 40px 40px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: auto;
 }

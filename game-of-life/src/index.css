@@ -13,6 +13,7 @@ body{
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  line-height: 1.5;
 }
 
 h1 {
@@ -39,23 +40,23 @@ main {
   flex-direction: column;
   align-items: center;
   width: 48%;
-  padding: 2%;
+  padding: 1.5%;
 }
 
 .grid-card {
   background-color: #e28cf5;
-  border-radius:15px;
+  border-radius: 15px;
   padding: 0.2%;
   /* margin-top: 7%; */
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
 .settings {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
   width: 100%;
   margin-top: 15px;
   margin-bottom: -45px;
@@ -89,7 +90,8 @@ main {
 .first-set-buttons {
   display: flex;
   justify-content: space-between;
-  width: 100%
+  width: 100%;
+  margin: 2% 0;
 }
 
 button {
@@ -102,9 +104,8 @@ button {
   background-size: 300%;
   background-position: left;
   transition: background-position 1s;
-  /* background-color: #e28cf5; */
   color: black;
-  width: 120px;
+  width: 130px;
   border-radius: 7px;
 }
 
@@ -113,13 +114,18 @@ button:hover {
   background-position: right;
 }
 
+button:disabled {
+  background-image: linear-gradient(45deg, lightgrey, #f5908c);
+  color: darkgrey;
+}
+
 .right-rules-and-presets {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   width: 48%;
-  padding: 2%;
+  padding: 0 2%;
 }
 
 .right-rules-and-presets h2 {
@@ -127,36 +133,48 @@ button:hover {
 } 
 
 .rules-section {
-  width: 85%;
+  width: 72%;
   text-align: left;
+  margin: 2% 0;
 }
 
 .rules-section p {
   width: 90%;
-  margin: 5%;
+  /* margin: 5%; */
+}
+
+.side-by-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .presets-section {
-  width: 85%;
+  width: 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-start;  
+  height: 100%;
 }
 
 .presets-section p {
-  width: 90%;
-  margin: 1% 5%;
+  width: 70%;
+  margin-top: -0.2rem;
+  margin-bottom: 2.5rem;
 }
-.each-preset{
+
+.each-preset {
   cursor: pointer;
   border: 0;
   border-radius: 7px;
   padding: .4rem .4rem;
-  margin: .5rem;
+  margin: .5rem; 
   font-size: 1.5rem;
   background-image: linear-gradient(45deg, #fff86e, #f5908c);
   background-size: 300%;
+  background-position: left;
+  transition: background-position 1s;
   height: 40px;
   width: 260px;
   text-align: center;
@@ -165,13 +183,37 @@ button:hover {
   align-items: center;
 }
 
+.each-preset:hover {
+  background-position: right;
+}
+
 .presets-list {
   /* background-color:#e28cf5; */
   border-radius: 7px;
-  margin: 40px 40px;
-  padding: 1rem;
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: auto;
+  margin-top: -2%;
+}
+
+.create-your-own {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;  
+  height: 100%;
+}
+
+.create-your-own p {
+  width: 70%;
+  margin-top: -0.2rem;
+  margin-bottom: 2.5rem;
+}
+
+.create-your-own img {
+  height: 150px;
+  width: 150px;
 }

@@ -193,24 +193,27 @@ function App() {
 						<p>2. Any dead cell with 3 live neighbors becomes a live cell.</p>
 						<p>3. All other live cells die in the next generation. Similarly, all other dead cells remain dead.</p>
 					</div>
-        			<div className="presets-section">
-						<h2>Presets</h2>
-						<p>Click on one of the common configurations below to start the game with a preset. How many generations will it last?</p>
-						<div className="presets-list">
-							{presets.map(preset => {
-								return <PresetConfigurations
-									key={presets.name}
-									{...preset}
-									numRows={numRows}
-									clearGrid={clearGrid}
-									createPresetGrid={createPresetGrid}
-								/>
-							})}
+					<div className="side-by-side">
+						<div className="presets-section">
+							<h2>Presets</h2>
+							<p>Click on one of the common configurations below to start the game with a preset. How many generations will it last?</p>
+							<div className="presets-list">
+								{presets.map(preset => {
+									return <PresetConfigurations
+										key={presets.name}
+										{...preset}
+										numRows={numRows}
+										clearGrid={clearGrid}
+										createPresetGrid={createPresetGrid}
+									/>
+								})}
+							</div>
 						</div>
-        			</div>
-					<div>
-						<h2>Create  your own!</h2>
-						<p>Click on any cells to activate them, then click the Start! button to watch your creation live or die. Have fun!</p>
+						<div className="create-your-own">
+							<h2>Create  your own!</h2>
+							<p>Click on any cells to activate them, then click the Start! button to watch your creation live or die. Have fun!</p>
+							<img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Game_of_life_toad.gif" alt="Game of life toad.gif"/>
+						</div>
 					</div>
 				</div>
       		</main>

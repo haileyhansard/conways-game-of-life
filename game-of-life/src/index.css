@@ -33,6 +33,8 @@ main {
   font-family: "Source Sans Pro",sans-serif;
   display: flex;
   margin: 0 auto;
+  padding: 0 5%;
+  max-width: 1600px;
 }
 
 .left-grid-and-controls {

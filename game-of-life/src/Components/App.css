@@ -20,7 +20,7 @@
    linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); */
   background-image: linear-gradient(45deg, #f5908c, #fff86e,  #e28cf5);
   background-size: 350%;
-  animation: bg-animation 30s infinite alternate;
+  animation: bg-animation 20s infinite alternate;
   
   font-family: 'Arimo', sans-serif;
   font-size: calc(10px + 2vmin);

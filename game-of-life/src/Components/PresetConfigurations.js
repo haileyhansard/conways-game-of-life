@@ -6,8 +6,8 @@ import React from 'react';
     <div className="each-preset" onClick={() => createPresetGrid(matrix, startingPoint)}>
       {name}
     </div>
-  )
- } 
+  );
+ }; 
 
 export default PresetConfigurations;
 

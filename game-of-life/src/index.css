@@ -166,6 +166,11 @@ button:disabled {
   margin-bottom: 2.5rem;
 }
 
+.presets-section .note {
+  font-size: .9rem;
+  margin-top: -1.6rem;
+}
+
 .each-preset {
   cursor: pointer;
   border: 0;

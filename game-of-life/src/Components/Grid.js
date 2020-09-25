@@ -27,7 +27,7 @@ const Grid = ({ grid, setGrid, running }) => {
               <div 
                 key={'col' + i2}
                 className={col ? "cell alive" : "cell"} 
-                 onClick={running ? null : () => activateColor(i1, i2)} 
+                onClick={running ? null : () => activateColor(i1, i2)} 
               />
             ))}
           </div>

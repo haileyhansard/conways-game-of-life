@@ -2,29 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 .App-header {
-  /* background: linear-gradient(45deg, #f5908c, #fff86e,  #e28cf5 );   */
-  /*FAVORITE ^^^ */
-  /* background-color: #282c34; */
-  /* background: linear-gradient(to bottom, #92e3fc, #2f80ed);  */
-  /* blues */
-  /* background: linear-gradient(to bottom, #ffe3ff, #e62ce2); pinks*/
-  /* instagram colors rainbow */
-  /* #77ff94, #09e83a, greens*/ 
-    /* background: linear-gradient(to right, #09e83a, #77ff94, #09e83a);
-   */
-   /* background: 
-   radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
-   radial-gradient(circle farthest-corner at 0 -25%, #5258cf, transparent 50%),
-   radial-gradient(circle farthest-corner at 100% 0, #893dc2, transparent 50%),
-   radial-gradient(circle farthest-corner at 100% 100%, #d9317a, transparent),
-   linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%); */
   background-image: linear-gradient(45deg, #f5908c, #fff86e,  #e28cf5);
   background-size: 350%;
   animation: bg-animation 20s infinite alternate;
   
   font-family: 'Arimo', sans-serif;
   font-size: calc(10px + 2vmin);
-  /* color: #fffffa; */
   color: black;
 
   min-height: 10vh;

@@ -20,8 +20,6 @@ const operations = [
 	[1, -1],
 ];
 
-// let Toad = require('../../assets/Game_of_life_toad.gif');
-
 const presets = [
 	{
 		name: "Toad",
@@ -38,6 +36,17 @@ const presets = [
 		matrix: [[0, 0], [-1, 0], [0, -1], [0, 1], [1, 0]],
 		startingPoint: 0,
 	},
+	{
+		name: "Spaceship",
+		matrix: [[-1, 0],[-2, -1],[-2, -2],[-1, -2],[0, -2],
+			[-3, -8],[-4, -8],[-4, -9],[-3, -10],[-2, -10],[-2, -9],
+			[-3, -17],[-3, -18],[-4, -17],[-4, -18],
+			[-4, 4],[-4, 5],[-5, 4],[-5, 6],[-6, 5],[-6, 6],
+			[-5, 16],[-5, 17],[-6, 16],[-6, 17],
+			[6, 6],[6, 7],[6, 8],[7, 6],[8, 7],
+			[1, 17],[2, 17],[3, 17],[1,18],[2,19]],
+		startingPoint: 0,
+	}
 ];
 
 //generate initial empty grid with equal number of rows/columns
@@ -208,6 +217,7 @@ function App() {
 									/>
 								})}
 							</div>
+							<p className="note">*Please increase grid size to 40x40 for Spaceship.</p>
 						</div>
 						<div className="create-your-own">
 							<h2>Create  your own!</h2>

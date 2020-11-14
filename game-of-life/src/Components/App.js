@@ -122,11 +122,11 @@ function App() {
 	
 
   	const runSimulation = useCallback(() => {
-    // see if not currently running, then return
+    // determine if not currently running, then return
+	// whenever this is false, it will die, our kill condition for the recursive function
     	if (!runningRef.current) {
       	return;
     	}
-    //whenever ^^ this is false, it will die, our kill condition for the recursive function
 
     // simulate the game by checking the neighboring cells
 		setGrid(checkNeighbors);

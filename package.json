@@ -11,7 +11,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.3"
   },
-  "homepage": "https://github.com/haileyhansard/conways-game-of-life/",
+  "homepage": "https://haileyhansard.github.io/conways-game-of-life/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

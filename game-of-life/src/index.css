@@ -9,7 +9,7 @@ body{
 }
 
 .App {
-  max-width: auto;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -34,7 +34,7 @@ main {
   display: flex;
   margin: 0 auto;
   padding: 0 5%;
-  max-width: 1600px;
+  max-width: 100%;
 }
 
 .left-grid-and-controls {
@@ -53,6 +53,11 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+.grid {
+  width: 100%;
 }
 
 .settings {
@@ -223,4 +228,45 @@ button:disabled {
 .create-your-own img {
   height: 150px;
   width: 150px;
+}
+
+@media(max-width: 800px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-grid-and-controls {
+    width: 98%;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .right-rules-and-presets {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .rules-section {
+    width: 40%;
+  }
+
+  .rules-section > p {
+    width: 100%;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }  
+  
+  .side-by-side {
+    display: flex;
+    flex-direction: column;
+    width: 98%;
+    align-items: center;
+  }
 }
